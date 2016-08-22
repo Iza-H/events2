@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <link rel="stylesheet" href="styles/css/style.css">
+</head>
+<body ng-app="events" ng-controller="MainCtrl">
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Month</th>
+            <th>Day</th>
+            <th>Time / Location</th>
+        </tr>
+
+        <tr ng-repeat="event in events">
+            <td><a href="{{event.link}}" >{{event.title}}</a></td>
+            <td>{{event.month}}</td>
+            <td>{{event.day}}</td>
+            <td>{{event.where}}</td>
+        </tr>
+
+    </table>
+
+    <script src="libs/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/MainController.js"></script>
+    <script src="scripts/services/EventService.js"></script>
+    <script src="scripts/properties/Properties.js"></script>
+</body>
+</html>
